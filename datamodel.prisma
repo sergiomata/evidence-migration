@@ -1,0 +1,30 @@
+
+type Evidence {
+  id: ID! @id
+  type: Type!
+  guide: String
+  orderId: String
+  statusId: String
+  pointId: Int
+  url: String
+  description: String
+  isDelivered: Boolean
+  receivedBy: String
+  createdAt: DateTime @createdAt
+  createdBy: String
+  createdByName: String
+  updatedAt: DateTime @updatedAt
+  updatedBy: String 
+} 
+
+type Type {
+  id: ID! @id
+  name: String
+  code: String! @unique
+  description: String
+  createdAt: DateTime @createdAt
+  createdBy: String
+  updatedAt: DateTime @updatedAt
+  updatedBy: String 
+}
+
